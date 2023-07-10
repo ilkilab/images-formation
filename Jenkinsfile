@@ -3,7 +3,7 @@ node {
  checkout scm
  }
  stage('test user') {
- sh("echo $USER")
+ echo $USER
  }
  stage ('Build and Push Image to Docker Registry') {
  dir("jenkins"){
