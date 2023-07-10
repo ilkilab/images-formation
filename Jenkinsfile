@@ -1,6 +1,7 @@
 node {
  stage('SCM') {
  checkout scm
+  echo $USER
  }
  stage ('Build and Push Image to Docker Registry') {
  dir("jenkins"){
