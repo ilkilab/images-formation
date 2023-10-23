@@ -1,5 +1,5 @@
 #v0.1 10/07/2023
-FROM jenkins/jenkins:2.413
+FROM jenkins/jenkins:2.414
 USER root
 #installation de docker
 RUN apt update && apt install ca-certificates curl gnupg -yqq
