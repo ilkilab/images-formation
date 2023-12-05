@@ -1,0 +1,9 @@
+FROM gitlab/gitlab-runner:v16.6.1
+LABEL MAINTAINER=tyb3n
+#download kubectl source
+ADD https://dl.k8s.io/release/v1.28.4/bin/linux/amd64/kubectl .
+#install kubectl
+RUN sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && rm ./kubectl
+#change user and workdir
+USER gitlab-runner
+WORKDIR /home/gitlab-runner/
